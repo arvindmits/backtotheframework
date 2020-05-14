@@ -15,7 +15,7 @@ namespace SeeSharpEight
             _currentDate = dateTime;
         }
 
-        public /*readonly*/ DateTime AddDaysNew(int days)
+        public /* readonly */ DateTime AddDaysNew(int days)
         {
             _currentDate = _currentDate.AddDays(days);
             return _currentDate;

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Xunit;
+using static System.Diagnostics.Trace;
 
 #nullable disable
 
@@ -11,7 +8,8 @@ namespace SeeSharpEight
 
     public class NullableReferenceTypesExampleDemo
     {
-        public static void Run()
+        [Fact]
+        public void Run()
         {
             var nrte = new NullableReferenceTypesExample();
             nrte.DoSomething();
@@ -46,9 +44,9 @@ namespace SeeSharpEight
 
         public void DoSomething()
         {
-            Console.WriteLine(_someObject.Message);
-            Console.WriteLine(_emailaddress.Length);
-            Console.WriteLine(_luckyNumber);
+            WriteLine(_someObject.Message);
+            WriteLine(_emailaddress.Length);
+            WriteLine(_luckyNumber);
         }
     }
 

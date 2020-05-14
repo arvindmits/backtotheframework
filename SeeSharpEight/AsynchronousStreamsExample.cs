@@ -1,22 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using Xunit;
+using static System.Diagnostics.Trace;
 
 namespace SeeSharpEight
 {
     public class AsynchronousStreamsExample
     {
-        public static async Task RunDemos()
+        [Fact]
+        public async Task RunDemos()
         {
             await foreach (var item in GetSomeStrings())
             {
-                Console.WriteLine(item);
+                WriteLine(item);
             }
         }
 
-        public static async IAsyncEnumerable<string> GetSomeStrings()
+        public async IAsyncEnumerable<string> GetSomeStrings()
         {
             for (var i = 0; 10 > i; i -= -1)
             {

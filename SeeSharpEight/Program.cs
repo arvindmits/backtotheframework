@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace SeeSharpEight
@@ -7,19 +10,17 @@ namespace SeeSharpEight
     {
         static async Task Main(string[] args)
         {
-            //var readOnlyMembersExample = new ReadOnlyMembersExample(DateTime.UtcNow);
-            //var _ = readOnlyMembersExample.AddDaysNew(1);
+            Trace.Listeners.Add(new ConsoleTraceListener());
 
-            //await AsynchronousStreamsExample.RunDemos();
-            await UsingDeclarationsExample.RunDemos();
-            //NullCoalescingAssignmentExample.RunDemos();
-            //IndicesAndRangesExample.RunDemos();
-            //PatternMatchingExample.RunDemos();
-            //DefaultInterfaceMethodDemo.RunDemos();
+            var readOnlyMembersExample = new ReadOnlyMembersExample(DateTime.UtcNow);
+            var _ = readOnlyMembersExample.AddDaysNew(1);
 
-         
+            await new AsynchronousStreamsExample().RunDemos();
+            await new UsingDeclarationsExample().RunDemos();
+            new NullCoalescingAssignmentExample().RunDemos();
+            new IndicesAndRangesExample().RunDemos();
+            new PatternMatchingExample().RunDemos();
+            new DefaultInterfaceMethodExample().RunDemos();
         }
     }
-
-
 }
