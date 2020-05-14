@@ -10,11 +10,12 @@ namespace SeeSharpEight
             //var readOnlyMembersExample = new ReadOnlyMembersExample(DateTime.UtcNow);
             //var _ = readOnlyMembersExample.AddDaysNew(1);
 
-            UsingDeclarationsExample.RunDemos();
+            //await AsynchronousStreamsExample.RunDemos();
+            await UsingDeclarationsExample.RunDemos();
             //NullCoalescingAssignmentExample.RunDemos();
             //IndicesAndRangesExample.RunDemos();
             //PatternMatchingExample.RunDemos();
-            //await AsynchronousStreamsExample.RunDemos();
+            //DefaultInterfaceMethodDemo.RunDemos();
 
          
         }

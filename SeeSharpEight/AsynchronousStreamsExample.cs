@@ -10,7 +10,7 @@ namespace SeeSharpEight
     {
         public static async Task RunDemos()
         {
-            await foreach (var item in AsynchronousStreamsExample.GetSomeStrings())
+            await foreach (var item in GetSomeStrings())
             {
                 Console.WriteLine(item);
             }

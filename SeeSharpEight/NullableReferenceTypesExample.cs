@@ -4,8 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+#nullable disable
+
 namespace SeeSharpEight
 {
+
     public class NullableReferenceTypesExampleDemo
     {
         public static void Run()
@@ -55,3 +58,4 @@ namespace SeeSharpEight
     }
 
 }
+#nullable restore
